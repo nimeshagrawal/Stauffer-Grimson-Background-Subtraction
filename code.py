@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
-
-
 import numpy as np
 import cv2 as cv
 import math
@@ -16,7 +10,7 @@ from numpy.linalg import norm, inv
 from scipy.stats import multivariate_normal as mv_norm
 from sklearn.cluster import KMeans
 
-video = cv.VideoCapture('umcp.mpg')
+video = cv.VideoCapture('data.mpg')
 
 
 number_of_frames_to_start = 100
@@ -262,7 +256,7 @@ display_frame(for_grd)
 this is for background
 '''
 def display_frame3():
-    video = cv.VideoCapture("umcp.mpg")
+    video = cv.VideoCapture("data.mpg")
     video1 = cv.VideoCapture("Gaussian4.avi")
     fourcc = cv.VideoWriter_fourcc(*'XVID')
     out = cv.VideoWriter("BG1.avi", fourcc, 24.0 , (352,240))
